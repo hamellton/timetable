@@ -16,7 +16,7 @@
           yk: 'Юлія Киянець',
           if: 'Ian Firth',
           nm: 'Natalia Mykhnenko',
-          gj: 'Graham Jones'
+          gj: 'Graham Jones, Natalia Savchenko'
       };
       // $("#addevent").change(function() {
       //   console.log($(this).serializeArray());
