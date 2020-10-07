@@ -1,0 +1,251 @@
+/*body {
+  padding-top: 70px;
+}*/
+
+
+/*body {
+  background-color: #eee !important;
+}*/
+
+.navbar {
+    background-color: #0a6399 !important;
+}
+
+.navbar-header {
+    color: #fff;
+}
+
+.month-label {
+    margin-top: 65px;
+}
+
+.month {
+    color: #AE719F;
+    font-size: 16px;
+    width: 6%;
+    /*border-right: 2px solid #7c7e7f !important;*/
+}
+
+tbody .btn-default {
+    opacity: 0.20;
+}
+
+tbody .btn-warning {
+    opacity: 0.60;
+}
+
+tbody button:hover {
+    opacity: 1.0;
+}
+
+th {
+    width: 210px;
+}
+
+th div {
+    color: #AE719F;
+}
+
+
+/*th {
+  color: #666262;
+}*/
+
+.event-info {
+    border: 2px solid #ED5050;
+    color: #ED5050;
+    padding-left: 5px;
+    font-weight: 700;
+}
+
+.event-accept {
+    border: 2px solid #6B6A6A;
+    color: #6B6A6A;
+    padding-left: 5px;
+    font-weight: 700;
+}
+
+.event-confirm {
+    border: 2px solid #AE64EA;
+    color: #AE64EA;
+    padding-left: 5px;
+    font-weight: 700;
+}
+
+.event-info,
+.event-accept,
+.event-confirm {
+    min-width: 170px;
+}
+
+.status-1>input,
+.status-2>input,
+.status-3>input {
+    margin-right: 5px;
+}
+
+.status-1,
+.status-2,
+.status-3 {
+    float: left;
+    width: 33.3%;
+    text-align: center;
+    color: #fff;
+    font-weight: 700;
+    height: 30px;
+}
+
+.status-1 {
+    background-color: #ff4444;
+}
+
+.status-2 {
+    background-color: #757575;
+}
+
+.status-3 {
+    background-color: #aa66cc;
+}
+
+#delEvent,
+#updateEvent {
+    margin-right: 5px;
+    opacity: 0.4;
+}
+
+#delEvent:hover,
+#updateEvent:hover {
+    opacity: 1.0;
+}
+
+.table-bordered>tbody>tr>td,
+.table-bordered>tbody>tr>th {
+    border: 1px solid #BBC2C6;
+}
+
+tr>td:first-child {
+    font-weight: 700;
+}
+
+.rh>td {
+    background-color: #BEE2AE;
+}
+
+.mb>td {
+    background-color: #f9bfff;
+}
+
+.tb>td {
+    background-color: #d5d2d2;
+}
+
+.ss>td {
+    background-color: #9AADED;
+}
+
+.lm>td {
+    background-color: #EFD481;
+}
+
+.ok>td {
+    background-color: #BEC5E5;
+}
+
+.nk>td {
+    background-color: #EAA59F;
+}
+
+.gb>td {
+    background-color: #A1EDED;
+}
+
+.yk>td {
+    background-color: #A1EDED;
+}
+
+.kk>td {
+    background-color: #81EFC4;
+}
+
+.as>td,
+.lk>td {
+    background-color: #F7E1E1;
+}
+
+.ls>td {
+    background-color: #bcaaa4;
+}
+
+.lo>td {
+    background-color: #90caf9;
+}
+
+.nb>td {
+    background-color: #9AADED;
+}
+
+.mp>td {
+    background-color: #E98E3F;
+}
+.gj>td {
+    background-color: #f9bfff;
+}
+
+.hide {
+    display: none;
+}
+
+.ok,
+.if {
+    display: none;
+}
+
+.weekend {
+    background-color: #D3D1D1;
+    /*color: grey;*/
+}
+
+.dayoff {
+    background-color: #EFEFEF !important;
+    /*color: grey;*/
+}
+
+.place,
+.eventlink,
+.type-of-event,
+.campaign,
+.time,
+.theme,
+.additionaltheme,
+.additionalbook,
+.manager,
+.comment,
+.typeevent,
+.book,
+.driver,
+.numberC,
+.thankYouLetter,
+.ePanelComment,
+.webinarsComment,
+.dateSend,
+.advertComment,
+.competitionComment,
+.certificateComment,
+.invitationComment,
+.linkComment,
+.reportComment,
+.offerComment {
+    display: none;
+}
+
+.event-view {
+    /*border: 1px solid #569db4;*/
+    border-radius: 6px;
+    padding: 10px;
+    margin-top: 8px;
+    margin-bottom: 5px;
+    background-color: rgba(255, 255, 255, 0.7);
+    -moz-box-shadow: 3px 3px 5px 6px #ccc;
+    -webkit-box-shadow: 3px 3px 5px 6px #919191;
+    box-shadow: 0px 1px 3px 0px #919191;
+}

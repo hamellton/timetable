@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Timetable</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+  <!-- Compiled and minified JavaScript -->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="js/vue.js"></script>
+</head>
+<style>
+  .task-cat {
+    padding: 2px 4px;
+    color: #fff;
+    font-weight: 300;
+    font-size: 0.8rem;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    background-clip: padding-box
+  }
+</style>
+
+<body>
+  <nav>
+    <div class="nav-wrapper cyan darken-2">
+      <div class="container">
+        <ul id="nav-mobile" class="left hide-on-med-and-down">
+          <span>Dinternal Education Contacts</span>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+
+    <div id="app">
+      <form>
+        <div class="row">
+          <div class="col s4">
+            Прізвище:
+            <div class="input-field inline">
+              <input placeholder="Перепічай" id="last_name" type="text" v-model="question">
+              <!-- <label for="last_name" data-error="wrong" data-success="right">Last Name</label> -->
+            </div>
+          </div>
+          <div class="col s4">
+            Відділ:
+            <div class="input-field inline">
+              <input placeholder="ІТ" id="department" type="text" v-model="department">
+              <!-- <label for="last_name" data-error="wrong" data-success="right">Last Name</label> -->
+            </div>
+          </div>
+          <div class="col s4">
+            Місто:
+            <div class="input-field inline">
+              <input placeholder="Київ" id="city" type="text" v-model="city">
+              <!-- <label for="last_name" data-error="wrong" data-success="right">Last Name</label> -->
+            </div>
+          </div>
+        </div>
+      </form>
+
+
+      <contact :sortarray="sortarray"></contact>
+
+
+    </div>
+
+
+  </div>
+
+  <script>
+    Vue.component('contact', {
+      props: ["sortarray"],
+      template: `<table class="highlight striped bordered">
+                <thead>
+                  <tr>
+                    <th>Прізвище</th>
+                    <th>Телефон</th>
+                    <th>Мобільний</th>
+                    <th>Email</th>
+                    <th>Відділ</th>
+                    <th>Місто</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tablebody v-for="item in sortarray" :item="item" :key="item.ID"></tablebody>
+                </tbody>
+              </table>`
+    });
+    Vue.component('tablebody', {
+      props: ["item", "tel"],
+      template: `<tr>
+                  <td><strong>{{ item.name}}</strong></td><td>{{ item.tel}}</td><td>{{ item.mob}}</td><td>{{ item.email}}</td><td><span v-bind:class="item.department | color" class="task-cat ">{{ item.department}}</span></td><td>{{ item.city}}</td>
+                </tr>`
+    })
+
+    let getMonthNumber = value => value[0][1].split('.')[1];
+
+
+    Vue.filter('color', function(value) {
+      if (value == 'Фінансовий відділ') return 'pink';
+      else if (value == 'Методичний відділ') return 'deep-orange';
+      else if (value == 'Відділ роботи з клієнтами') return 'green';
+      else if (value == 'Пірсон') return 'orange darken-4';
+      else if (value == 'Відділ продажу') return 'blue';
+      else if (value == 'Водій') return 'teal';
+      else if (value == 'Маркетинговий відділ') return 'blue-grey';
+      else if (value == 'Head') return 'purple';
+      else if (value == 'Шоурум') return 'cyan';
+      else if (value == 'Склад') return 'brown';
+      else if (value == 'Support team') return 'indigo';
+      else if (value == 'Офіс') return 'light-green';
+      //else if (value == 'Финансы') return 'light-blue';
+
+      else return 'grey';
+    })
+
+    let app = new Vue({
+      el: '#app',
+      data: {
+        contacts: [{name:`Бабенко Марина`,tel:`-`,mob:`098 738 14 91`,email:`Babenko.M@dinternal.com.ua`,department:`Методичний відділ`,city:`Одеса`,ID:`1`},
+        // {name:`Барабаш Марія`,tel:`-`,mob:`050 318 28 78`,email:`barabash.m@dinternal.com.ua`,department:`Відділ продажу`,city:`Харків`,ID:`2`},
+        {name:`Бартон Том`,tel:`-`,mob:``,email:``,department:`Методичний відділ`,city:`Одеса`,ID:`3`},
+        {name:`Бєлєва Наталія`,tel:`715`,mob:`050 402 40 70`,email:`beleva.n@dinternal.com.ua`,department:`Відділ роботи з клієнтами`,city:`Київ`,ID:`4`},
+        {name:`Бізякіна Олена`,tel:``,mob:`093 311 36 53`,email:`bizyakina.e@dinternal.com.ua`,department:`Відділ роботи з клієнтами`,city:`Одеса`,ID:`5`},
+        {name:`Білоус Генадій`,tel:`704`,mob:`050 309 15 53`,email:`bilous.g @dinternal.com.ua`,department:`Методичний відділ`,city:`Київ`,ID:`6`},
+        {name:`Берест Олена `,tel:`708`,mob:`050 415 24 31`,email:`berest.e@dinternal.com.ua`,department:`Відділ продажу`,city:`Київ`,ID:`7`},
+        {name:`Бруско Миколай`,tel:``,mob:`050 487 87 75`,email:`n.brusko@dinternal.com.ua`,department:`Відділ продажу`,city:`Київ`,ID:`8`},
+        {name:`Бруско Анна`,tel:`709`,mob:`095 281 99 27`,email:`brusko.a@dinternal.com.ua`,department:`Відділ продажу`,city:`Київ`,ID:`9`},
+        {name:`Бутовська Вікторія`,tel:`703`,mob:`050 770 63 92`,email:`butovska.v@dinternal.com.ua`,department:`Фінансовий відділ`,city:`Київ`,ID:`10`},
+        {name:`Валуйська Валерія`,tel:`711`,mob:`063 842 53 67`,email:`Valuiska.V@dinternal.com.ua`,department:`Шоурум`,city:`Київ`,ID:`11`},
+        {name:`Вітюк Павло`,tel:`-`,mob:`050 383 29 99`,email:``,department:`Водій`,city:`Київ`,ID:`12`},
+        {name:`Голій Юля`,tel:`-`,mob:`098 748 03 44`,email:`holish_yulia@ukr.net`,department:`Відділ продажу`,city:`Львів`,ID:`13`},
+        {name:`Гресь Юлія`,tel:`-`,mob:`050 411 17 88`,email:`gres.j@dinternal.com.ua`,department:`Маркетинговий відділ`,city:`Київ`,ID:`14`},
+        {name:`Гриценко Леся`,tel:`710`,mob:`050 358 41 48`,email:`lesya.g@dinternal.com.ua`,department:`Відділ продажу`,city:`Київ`,ID:`15`},
+        {name:`Гудзь Вероніка `,tel:`716`,mob:`050 405 44 12`,email:`Hudz.V@dinternal.com.ua`,department:`Відділ продажу`,city:`Київ`,ID:`16`},
+        {name:`Демедюк Людмила`,tel:`733`,mob:`050 410 15 99`,email:`demediuk.l@dinternal.com.ua`,department:`Маркетинговий відділ`,city:`Київ`,ID:`17`},
+        {name:`Загоруйко Максим`,tel:`716`,mob:`050 355 45 32`,email:`zagoruiko.m@dinternal.com.ua`,department:`Відділ продажу`,city:`Київ`,ID:`18`},
+        {name:`Зарахович Альона`,tel:`-`,mob:`050 353 79 37`,email:`zara@dinternal.com.ua`,department:`Відділ продажу`,city:`Київ`,ID:`19`},
+        {name:`Іщенко Дмитро`,tel:`-`,mob:`067 761 75 54`,email:`d.ishchenko@gmail.com`,department:`Фінансовий відділ`,city:`Київ`,ID:`20`},
+        {name:`Каліш Світлана`,tel:`736`,mob:`098 381 73 16`,email:`kalish.s@dinternal.com.ua`,department:`Маркетинговий відділ`,city:`Київ`,ID:`21`},
+        {name:`Камбуленко Наталія`,tel:`-`,mob:`067 786 53 04`,email:`Kambulenko.n@dinternal.com.ua`,department:`Відділ продажу`,city:`Одеса`,ID:`22`},
+        {name:`Катуніна Євгенія`,tel:`718`,mob:`050 464 45 79`,email:`katunina.e@dinternal.com.ua`,department:`Фінансовий відділ`,city:`Київ`,ID:`23`},
+        {name:`Коблай Оксана`,tel:`713`,mob:`050 415 24 59`,email:`oksana.k@dinternal.com.ua`,department:`Відділ роботи з клієнтами`,city:`Київ`,ID:`24`},
+        {name:`Кравець Тетяна`,tel:`702`,mob:`050 357 49 42`,email:`kravets.t@dinternal.com.ua`,department:`Фінансовий відділ`,city:`Київ`,ID:`25`},
+        {name:`Куріцин Микола`,tel:`-`,mob:`050 352 91 97`,email:`kuricin.n@dinternal.com.ua`,department:`Склад`,city:`Київ`,ID:`26`},
+        {name:`Лахно Марина`,tel:`702`,mob:`063 997 19 88`,email:`lakhno.m@dinternal.com.ua`,department:`Фінансовий відділ`,city:`Київ`,ID:`27`},
+        {name:`Лучак Костянтин`,tel:`-`,mob:`097 717 34 75, 095 713 04 59`,email:`kostyaluchak@mail.ru`,department:`Відділ продажу`,city:`Львів`,ID:`28`},
+        {name:`Лучак Олена`,tel:`-`,mob:`097 981 92 07, 095 355 98 02`,email:`luchak.e@mail.ru`,department:`Відділ продажу`,city:`Львів`,ID:`29`},
+        {name:`Малетич Світлана`,tel:`-`,mob:`067 341 79 19, 050 970 94 79`,email:`svitround@yahoo.com`,department:`Відділ продажу`,city:`Львів`,ID:`30`},
+        {name:`Малигіна Марина`,tel:`717`,mob:`067 441 53 21`,email:`marina.malygina@pearson.com`,department:`Пірсон`,city:`Київ`,ID:`31`},
+        {name:`Марчевська Інна`,tel:`703`,mob:`050 355 37 73`,email:`marchevska.i@dinternal.com.ua`,department:`Фінансовий відділ`,city:`Київ`,ID:`32`},
+        {name:`Міходуй Олена`,tel:`721`,mob:`050 444 37 04`,email:`mikhodui.e@dinternal.com.ua`,department:`Методичний відділ`,city:`Київ`,ID:`33`},
+        {name:`Оберемчук Лілія`,tel:`720`,mob:`050 410 41 46`,email:`oberemchuk.l@dinternal.com.ua `,department:`Відділ роботи з клієнтами`,city:`Київ`,ID:`34`},
+        {name:`Орищук Лідія`,tel:`-`,mob:`096 931 40 63`,email:`oryshchuk.l@dinternal.com.ua`,department:`Методичний відділ`,city:`Київ`,ID:`35`},
+        {name:`Оснач Дар'я`,tel:`738`,mob:`066 592 62 35`,email:`osnach.d@dinternal.com.ua`,department:`Відділ продажу`,city:`Київ`,ID:`36`},
+        {name:`Офіс (шоурум)`,tel:`701`,mob:`050 334 02 56, (044) 569 88 50`,email:``,department:`Офіс`,city:`Київ`,ID:`37`},
+        {name:`Офіс`,tel:`-`,mob:`(032) 260 01 94`,email:`showroom.l@dinternal.com.ua`,department:`Офіс`,city:`Львів`,ID:`38`},
+        {name:`Офіс`,tel:`-`,mob:`(048) 722 50 02`,email:``,department:`Офіс`,city:`Одеса`,ID:`39`},
+        {name:`Перепічай Олександр`,tel:`705`,mob:`050 418 58 64`,email:`perepichai@dinternal.com.ua`,department:`Відділ IT`,city:`Київ`,ID:`40`},
+        {name:`Петухов Юрій`,tel:`-`,mob:`050 410 73 95`,email:`ura@dinternal.com.ua`,department:`Склад`,city:`Київ`,ID:`41`},
+        {name:`Пилющак-Давид Наталя`,tel:`-`,mob:`097 845 79 74, 050 105 37 81`,email:`ndavyd@gmail.com`,department:`Відділ продажу`,city:`Львів`,ID:`42`},
+        {name:`Склад`,tel:`-`,mob:`249 94 86`,email:``,department:`Склад`,city:`Київ`,ID:`43`},
+        {name:`Пономарьова Валерія`,tel:`-`,mob:`050 411 44 70`,email:`Ponomariova.V@dinternal.com.ua`,department:`Офіс`,city:`Київ`,ID:`44`},
+        {name:`Попов Сергій`,tel:`-`,mob:`050 311 46 91`,email:``,department:`Водій`,city:`Київ`,ID:`45`},
+        {name:`Рибакова Олександра`,tel:`-`,mob:`048 722 50 02`,email:`Rubakova.a@dinternal.com.ua`,department:`Відділ роботи з клієнтами`,city:`Одеса`,ID:`46`},
+        {name:`Сидорчук Людмила`,tel:`-`,mob:`050 398 77 92`,email:`sydorchuk.l@dinternal.com.ua`,department:`Методичний відділ`,city:`Київ`,ID:`47`},
+        {name:`Сивак Олександр   `,tel:`-`,mob:`067 656 42 94`,email:``,department:`Водій`,city:`Київ`,ID:`48`},
+        {name:`Сорочинська Світлана`,tel:`722`,mob:`050 380 84 04`,email:`svetlana.s@dinternal.com.ua `,department:`Методичний відділ`,city:`Київ`,ID:`49`},
+        {name:`Сосіна Анна`,tel:`716`,mob:`050 414 11 49`,email:`Sosina.anna@dinternal.com.ua`,department:`Відділ продажу`,city:`Київ`,ID:`50`},
+        {name:`Тимофієва Анна`,tel:`706`,mob:`050 444 24 90`,email:`tymofieva.a@dinternal.com.ua`,department:`Відділ продажу`,city:`Київ`,ID:`52`},
+        {name:`Тиханіна Тетяна`,tel:`-`,mob:`050 359 68 02`,email:`tetianatikhanina@gmail.com`,department:`Фінансовий відділ`,city:`Київ`,ID:`53`},
+        {name:`Томашенко Оксана`,tel:`736`,mob:`098 389 11 75`,email:`tomashenko.o@dinternal.com.ua`,department:`Маркетинговий відділ`,city:`Київ`,ID:`54`},
+        {name:`Ткаченко Катерина`,tel:`716`,mob:`050 415 24 57`,email:`tkachenko.e@dinternal.com.ua`,department:`Відділ продажу`,city:`Київ`,ID:`55`},
+        {name:`Урумова Ніка`,tel:`711`,mob:`050 398 77 91`,email:`urumova.n@dinternal.com.ua`,department:`Офіс`,city:`Київ`,ID:`56`},
+        {name:`Факс`,tel:`-`,mob:`528 60 30`,email:``,department:`Офіс`,city:`Киів`,ID:`57`},
+        {name:`Ферлей Юлія`,tel:`711`,mob:`099 159 95 55`,email:`ferley.j@dinternal.com.ua`,department:`Шоурум`,city:`Київ`,ID:`58`},
+        {name:`Хадсон Майкл`,tel:`-`,mob:`066 084 77 56`,email:`m.hudson@dinternal.com.ua`,department:`Відділ продажу`,city:`Київ`,ID:`59`},
+        {name:`Цибульська Інна`,tel:`719`,mob:`050 446 17 67`,email:`inna@dinternal.com.ua`,department:`Відділ продажу`,city:`Київ`,ID:`60`},
+        {name:`Черненко Сергій`,tel:`-`,mob:`066 137 93 90`,email:``,department:`Водій`,city:`Київ`,ID:`61`},
+        {name:`Шелест Анна`,tel:`724`,mob:`050 445 28 51`,email:`ashelest@dinternal.com.ua `,department:`Відділ продажу`,city:`Київ`,ID:`62`},
+        {name:`Ярська Ольга`,tel:`-`,mob:`067 166 18 72`,email:`olga.yarska@pearson.com`,department:`Пірсон`,city:`Львів`,ID:`64`},
+        {name:`2service`,tel:`-`,mob:`-`,email:`Support@2service.com.ua`,department:`Відділ ІТ`,city:`Київ`,ID:`65`},
+        {name:` Анна Жарова`,tel:``,mob:`095 288 85 01`,email:`-`,department:`-`,city:`Одеса`,ID:`66`},
+        {name:`Анна Куленко`,tel:``,mob:`095 288 85 03`,email:`-`,department:`-`,city:`Одеса`,ID:`67`},
+        {name:`Анна Муджеб`,tel:``,mob:`095 288 85 07`,email:`-`,department:`-`,city:`Одеса`,ID:`68`},
+        {name:`Наташа Ракоид`,tel:``,mob:`095 288 85 06`,email:`-`,department:`-`,city:`Одеса`,ID:`69`},
+        {name:`Андрей Токаренко`,tel:``,mob:`095 288 85 04`,email:`-`,department:`-`,city:`Одеса`,ID:`70`},
+        {name:`Сергей Свеченко`,tel:``,mob:`095 288 85 09`,email:`-`,department:`-`,city:`Одеса`,ID:`71`},
+        {name:`Снігур Юлія Володимирівна`,tel:``,mob:`095 348 05 89 `,email:`-`,department:`-`,city:`Львів`,ID:`72`},
+        {name:`Паславський Йосип Іванович`,tel:``,mob:`095 882 56 91`,email:`-`,department:`Склад`,city:`Львів`,ID:`73`},
+        {name:`Вересюк Василина Валеріївна`,tel:``,mob:`099 420 80 35`,email:`-`,department:`-`,city:`Львів`,ID:`74`},
+        {name:`Кавецький Назар Романович`,tel:``,mob:`067 370 04 57`,email:`-`,department:`Водій`,city:`Львів`,ID:`75`},
+        {name:`Бружинська(Степаник) Христина Миколаївна`,tel:``,mob:`099 420 67 48`,email:`-`,department:`-`,city:`Львів`,ID:`76`},
+        {name:`Гуменецький Тарас Іванович`,tel:``,mob:`099 063 93 52`,email:`-`,department:`-`,city:`Львів`,ID:`77`},
+        {name:`Кавецький Богдан Романович`,tel:``,mob:`098 050 00 90`,email:`-`,department:`-`,city:`Львів`,ID:`78`},
+        {name:`Голіш Юлія Романівна`,tel:``,mob:`098 748 03 44`,email:`-`,department:`Відділ продажу`,city:`Львів`,ID:`79`},
+        {name:`Бойко Тетяна Володимиріна`,tel:``,mob:`068 940 72 61`,email:`-`,department:`-`,city:`Львів`,ID:`80`},
+        {name:`Олександр`,tel:`-`,mob:`095 740 63 09 `,email:`-`,department:`Водій`,city:`Київ`,ID:`81`}
+        ],
+        question: '',
+        department: '',
+        city: ''
+      },
+      computed: {
+        // геттер вычисляемого значения
+        test: function() {
+          return 'computed-test'
+        },
+        sortarray: function() {
+          let str = this.question;
+          let str2 = this.department;
+          let str3 = this.city;
+          let temp = [];
+          str = str.toLowerCase();
+          str2 = str2.toLowerCase();
+          //str[0] = str[0].toUpperCase();
+          if (str === '' && str2 === '' && str3 === '') {
+            return this.contacts
+          } else if (str === '' && str2 !== '') {
+            return this.contacts.filter(function(item2) {
+              return item2.department.toLowerCase().includes(str2)
+            })
+          } else if (str === '' && str2 === '' && str3 !== '') {
+            return this.contacts.filter(function(item3) {
+              return item3.city.toLowerCase().includes(str3)
+            })
+          }
+
+
+          else {
+            temp = this.contacts.filter(function(item) {
+              return item.name.toLowerCase().includes(str)
+            }).slice();
+            return temp.filter(function(item2) {
+              return item2.department.toLowerCase().includes(str2)
+            }).slice();
+          };
+
+
+          // .filter(function(item2) {return item2.department.toLowerCase().includes(str2)});
+
+        }
+      }
+    })
+  </script>
+</body>
+
+</html>

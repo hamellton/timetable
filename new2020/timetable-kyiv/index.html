@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery.fullpage.min.css" />
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="js/weekend.js"></script>
+    <script src="js/makehtml.js"></script>
+    <script src="js/jquery.scrollto.js"></script>
+    <title>Timetable Kyiv 2019</title>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header"> <strong><h4>Calendar 2020 Kyiv</h4></strong> </div>
+                <div class="col-md-9 text-center" id="navigation">
+                    <h5>
+                        <span class="btn btn-xs btn-danger september">September</span>
+                        <span class="btn btn-xs btn-danger october">October</span>
+                        <span class="btn btn-xs btn-danger november">November</span>
+                        <span class="btn btn-xs btn-danger december">December</span>
+                        <span class="btn btn-xs btn-danger january">January</span>
+                        <span class="btn btn-xs btn-danger february">February</span>
+                        <span class="btn btn-xs btn-danger march">March</span>
+                        <span class="btn btn-xs btn-danger april">April</span>
+                        <span class="btn btn-xs btn-danger may">May</span>
+                        <span class="btn btn-xs btn-danger june">June</span>
+                        <span class="btn btn-xs btn-danger july">Липень</span>
+                        <span class="btn btn-xs btn-danger august">July</span>
+                    </h5>
+                </div>
+                <div class="col-md-1">
+                    <h5><a href="/contacts.html"><span class="btn btn-xs btn-success" ><strong> Contacts of DE</strong></span></a></h5>
+                </div>
+            </div>
+        </nav>
+        <!-- <div id="january"></div><div class="month-label"></div><span id="february"></span> <div class="month-label"></div>-->
+
+        <div class="month-label"></div>
+
+        <table class="table table-striped table-bordered">
+            <tbody>
+                <th class="month">August</th>
+                <th>Monday
+                    <div>01</div>
+                </th>
+                <th>Tuesday
+                    <div>02</div>
+                </th>
+                <th>Wednesday
+                    <div>03</div>
+                </th>
+                <th>Thursday
+                    <div>04</div>
+                </th>
+                <th>Friday
+                    <div>05</div>
+                </th>
+                <tr class="lm">
+                    <td>LM</td>
+                    <td data-date="01-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="02-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="03-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="04-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="05-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                </tr>
+                <tr class="ss">
+                    <td>SS</td>
+                    <td data-date="01-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="02-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="03-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="04-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="05-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                </tr>
+                <tr class="gb">
+                    <td>GB</td>
+                    <td data-date="01-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="02-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="03-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="04-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="05-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                </tr>
+                <tr class="kk">
+                    <td>KK\SM</td>
+                    <td data-date="01-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="02-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="03-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="04-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="05-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                </tr>
+                <tr class="ls">
+                    <td>LS</td>
+                    <td data-date="01-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="02-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="03-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="04-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="05-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                </tr>
+                <tr class="mp">
+                    <td>MP</td>
+                    <td data-date="01-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="02-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="03-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="04-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="05-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                </tr>
+                <tr class="yk">
+                    <td>YK</td>
+                    <td data-date="01-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="02-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="03-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="04-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="05-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                </tr>
+                <tr class="if">
+                    <td>IF</td>
+                    <td data-date="01-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="02-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="03-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="04-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="05-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                </tr>
+                <tr class="nm">
+                    <td>NM</td>
+                    <td data-date="01-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="02-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="03-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="04-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="05-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table class="table table-striped table-bordered">
+            <tbody>
+                <th class="month">August</th>
+                <th>Monday
+                    <div>08</div>
+                </th>
+                <th>Tuesday
+                    <div>09</div>
+                </th>
+                <th>Wednesday
+                    <div>10</div>
+                </th>
+                <th>Thursday
+                    <div>11</div>
+                </th>
+                <th>Friday
+                    <div>12</div>
+                </th>
+                <tr class="lm">
+                    <td>LM</td>
+                    <td data-date="12-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="13-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="14-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="15-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="16-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                </tr>
+                <tr class="ss">
+                    <td>SS</td>
+                    <td data-date="12-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="13-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="14-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="15-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="16-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                </tr>
+                <tr class="gb">
+                    <td>GB</td>
+                    <td data-date="12-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="13-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="14-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="15-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="16-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                </tr>
+                <tr class="kk">
+                    <td>KK\SM</td>
+                    <td data-date="12-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="13-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="14-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="15-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="16-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                </tr>
+                <tr class="ls">
+                    <td>LS</td>
+                    <td data-date="12-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="13-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="14-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="15-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="16-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                </tr>
+                <tr class="mp">
+                    <td>MP</td>
+                    <td data-date="12-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="13-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="14-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="15-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="16-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                </tr>
+                <tr class="yk">
+                    <td>YK</td>
+                    <td data-date="12-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="13-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="14-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="15-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="16-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                </tr>
+                <tr class="if">
+                    <td>IF</td>
+                    <td data-date="12-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="13-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="14-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="15-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="16-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                </tr>
+                <tr class="nm">
+                    <td>NM</td>
+                    <td data-date="12-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="13-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="14-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="15-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="16-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-striped table-bordered">
+            <tbody>
+                <th class="month">August</th>
+                <th>Monday
+                    <div>19</div>
+                </th>
+                <th>Tuesday
+                    <div>20</div>
+                </th>
+                <th>Wednesday
+                    <div>21</div>
+                </th>
+                <th>Thursday
+                    <div>22</div>
+                </th>
+                <th>Friday
+                    <div>23</div>
+                </th>
+                <tr class="lm">
+                    <td>LM</td>
+                    <td data-date="19-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="20-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="21-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="22-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="23-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                </tr>
+                <tr class="ss">
+                    <td>SS</td>
+                    <td data-date="19-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="20-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="21-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="22-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="23-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                </tr>
+                <tr class="gb">
+                    <td>GB</td>
+                    <td data-date="19-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="20-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="21-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="22-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="23-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                </tr>
+                <tr class="kk">
+                    <td>KK\SM</td>
+                    <td data-date="19-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="20-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="21-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="22-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="23-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                </tr>
+                <tr class="ls">
+                    <td>LS</td>
+                    <td data-date="19-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="20-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="21-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="22-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="23-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                </tr>
+                <tr class="mp">
+                    <td>MP</td>
+                    <td data-date="19-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="20-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="21-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="22-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="23-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                </tr>
+                <tr class="yk">
+                    <td>YK</td>
+                    <td data-date="19-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="20-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="21-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="22-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="23-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                </tr>
+                <tr class="if">
+                    <td>IF</td>
+                    <td data-date="19-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="20-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="21-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="22-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="23-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                </tr>
+                <tr class="nm">
+                    <td>NM</td>
+                    <td data-date="19-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="20-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="21-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="22-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="23-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-striped table-bordered">
+            <tbody>
+                <th class="month">August</th>
+                <th>Monday
+                    <div>26</div>
+                </th>
+                <th>Tuesday
+                    <div>27</div>
+                </th>
+                <th>Wednesday
+                    <div>28</div>
+                </th>
+                <th>Thursday
+                    <div>29</div>
+                </th>
+                <th>Friday
+                    <div>30</div>
+                </th>
+                <tr class="lm">
+                    <td>LM</td>
+                    <td data-date="26-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="27-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="28-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="29-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="30-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                </tr>
+                <tr class="ss">
+                    <td>SS</td>
+                    <td data-date="26-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="27-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="28-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="29-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="30-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                </tr>
+                <tr class="gb">
+                    <td>GB</td>
+                    <td data-date="26-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="27-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="28-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="29-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="30-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                </tr>
+                <tr class="kk">
+                    <td>KK\SM</td>
+                    <td data-date="26-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="27-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="28-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="29-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="30-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                </tr>
+                <tr class="ls">
+                    <td>LS</td>
+                    <td data-date="26-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="27-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="28-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="29-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="30-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                </tr>
+                <tr class="mp">
+                    <td>MP</td>
+                    <td data-date="26-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="27-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="28-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="29-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="30-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                </tr>
+                <tr class="yk">
+                    <td>YK</td>
+                    <td data-date="26-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="27-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="28-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="29-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="30-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                </tr>
+                <tr class="if">
+                    <td>IF</td>
+                    <td data-date="26-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="27-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="28-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="29-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="30-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                </tr>
+                <tr class="nm">
+                    <td>NM</td>
+                    <td data-date="26-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="27-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="28-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="29-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="30-08-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table class="table table-striped table-bordered">
+            <tbody>
+                <th class="month">September</th>
+                <th>Monday
+                    <div>01</div>
+                </th>
+                <th>Tuesday
+                    <div>02</div>
+                </th>
+                <th>Wednesday
+                    <div>03</div>
+                </th>
+                <th>Thursday
+                    <div>04</div>
+                </th>
+                <th>Friday
+                    <div>05</div>
+                </th>
+                <tr class="lm">
+                    <td>LM</td>
+                    <td data-date="01-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="02-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="03-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="04-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="05-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                </tr>
+                <tr class="ss">
+                    <td>SS</td>
+                    <td data-date="01-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="02-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="03-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="04-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="05-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                </tr>
+                <tr class="gb">
+                    <td>GB</td>
+                    <td data-date="01-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="02-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="03-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="04-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="05-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                </tr>
+                <tr class="kk">
+                    <td>KK\SM</td>
+                    <td data-date="01-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="02-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="03-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="04-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="05-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                </tr>
+                <tr class="ls">
+                    <td>LS</td>
+                    <td data-date="01-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="02-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="03-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="04-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="05-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                </tr>
+                <tr class="mp">
+                    <td>MP</td>
+                    <td data-date="01-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="02-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="03-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="04-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="05-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                </tr>
+                <tr class="yk">
+                    <td>YK</td>
+                    <td data-date="01-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="02-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="03-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="04-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="05-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                </tr>
+                <tr class="if">
+                    <td>IF</td>
+                    <td data-date="01-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="02-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="03-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="04-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="05-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                </tr>
+                <tr class="nm">
+                    <td>NM</td>
+                    <td data-date="01-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="02-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="03-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="04-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="05-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-striped table-bordered">
+            <tbody>
+                <th class="month">September</th>
+                <th>Monday
+                    <div>08</div>
+                </th>
+                <th>Tuesday
+                    <div>09</div>
+                </th>
+                <th>Wednesday
+                    <div>10</div>
+                </th>
+                <th>Thursday
+                    <div>11</div>
+                </th>
+                <th>Friday
+                    <div>12</div>
+                </th>
+                <tr class="lm">
+                    <td>LM</td>
+                    <td data-date="08-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="09-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="10-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="11-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="12-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                </tr>
+                <tr class="ss">
+                    <td>SS</td>
+                    <td data-date="08-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="09-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="10-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="11-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="12-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                </tr>
+                <tr class="gb">
+                    <td>GB</td>
+                    <td data-date="08-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="09-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="10-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="11-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="12-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                </tr>
+                <tr class="kk">
+                    <td>KK\SM</td>
+                    <td data-date="08-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="09-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="10-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="11-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="12-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                </tr>
+                <tr class="ls">
+                    <td>LS</td>
+                    <td data-date="08-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="09-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="10-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="11-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="12-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                </tr>
+                <tr class="mp">
+                    <td>MP</td>
+                    <td data-date="08-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="09-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="10-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="11-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="12-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                </tr>
+                <tr class="yk">
+                    <td>YK</td>
+                    <td data-date="08-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="09-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="10-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="11-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="12-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                </tr>
+                <tr class="if">
+                    <td>IF</td>
+                    <td data-date="08-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="09-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="10-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="11-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="12-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                </tr>
+                <tr class="nm">
+                    <td>NM</td>
+                    <td data-date="08-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="09-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="10-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="11-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="12-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-striped table-bordered">
+            <tbody>
+                <th class="month">September</th>
+                <th>Monday
+                    <div>15</div>
+                </th>
+                <th>Tuesday
+                    <div>16</div>
+                </th>
+                <th>Wednesday
+                    <div>17</div>
+                </th>
+                <th>Thursday
+                    <div>18</div>
+                </th>
+                <th>Friday
+                    <div>19</div>
+                </th>
+                <tr class="lm">
+                    <td>LM</td>
+                    <td data-date="15-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="16-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="17-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="18-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="19-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                </tr>
+                <tr class="ss">
+                    <td>SS</td>
+                    <td data-date="15-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="16-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="17-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="18-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="19-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                </tr>
+                <tr class="gb">
+                    <td>GB</td>
+                    <td data-date="15-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="16-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="17-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="18-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="19-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                </tr>
+                <tr class="kk">
+                    <td>KK\SM</td>
+                    <td data-date="15-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="16-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="17-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="18-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="19-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                </tr>
+                <tr class="ls">
+                    <td>LS</td>
+                    <td data-date="15-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="16-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="17-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="18-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="19-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                </tr>
+                <tr class="mp">
+                    <td>MP</td>
+                    <td data-date="15-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="16-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="17-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="18-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="19-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                </tr>
+                <tr class="yk">
+                    <td>YK</td>
+                    <td data-date="15-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="16-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="17-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="18-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="19-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                </tr>
+                <tr class="if">
+                    <td>IF</td>
+                    <td data-date="15-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="16-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="17-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="18-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="19-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                </tr>
+                <tr class="nm">
+                    <td>NM</td>
+                    <td data-date="15-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="16-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="17-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="18-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="19-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-striped table-bordered">
+            <tbody>
+                <th class="month">September</th>
+                <th>Monday
+                    <div>22</div>
+                </th>
+                <th>Tuesday
+                    <div>23</div>
+                </th>
+                <th>Wednesday
+                    <div>24</div>
+                </th>
+                <th>Thursday
+                    <div>25</div>
+                </th>
+                <th>Friday
+                    <div>26</div>
+                </th>
+                <tr class="lm">
+                    <td>LM</td>
+                    <td data-date="22-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="23-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="24-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="25-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="26-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                </tr>
+                <tr class="ss">
+                    <td>SS</td>
+                    <td data-date="22-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="23-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="24-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="25-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="26-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                </tr>
+                <tr class="gb">
+                    <td>GB</td>
+                    <td data-date="22-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="23-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="24-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="25-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="26-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                </tr>
+                <tr class="kk">
+                    <td>KK\SM</td>
+                    <td data-date="22-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="23-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="24-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="25-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="26-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                </tr>
+                <tr class="ls">
+                    <td>LS</td>
+                    <td data-date="22-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="23-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="24-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="25-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="26-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                </tr>
+                <tr class="mp">
+                    <td>MP</td>
+                    <td data-date="22-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="23-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="24-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="25-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="26-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                </tr>
+                <tr class="yk">
+                    <td>YK</td>
+                    <td data-date="22-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="23-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="24-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="25-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="26-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                </tr>
+                <tr class="if">
+                    <td>IF</td>
+                    <td data-date="22-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="23-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="24-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="25-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="26-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                </tr>
+                <tr class="nm">
+                    <td>NM</td>
+                    <td data-date="22-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="23-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="24-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="25-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                    <td data-date="26-09-2020"> <button type="button" class="btn btn-default btn-xs">Add</button> </td>
+                </tr>
+            </tbody>
+        </table>
+
+
+    </div>
+    </div>
+    <div class="container">
+        <div class="row"> </div>
+    </div>
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header"> <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <div class="col-md-10">
+                        <h4><span class="label label-primary">Date: <span class="dateevent"></span></span>&nbsp;&nbsp;<span class="label label-primary">Methodist: <span class="methodist"></span></span>
+                        </h4>
+                    </div>
+                </div>
+                <div class="modal-body modal-lg">
+                    <form id="addevent">
+                        <div class="row">
+                            <div class="col-md-12"> </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group"> <span class="status-1"><input type="radio" value="пропозиція" name="status" id="status-1" checked>planned</span> <span class="status-2"><input type="radio" value="підтверджено" name="status" id="status-2">confirmed</span>
+                                    <span class="status-3"><input type="radio" value="1c" name="status" id="status-3">recorded in 1C</span>
+                                    </br>
+                                    <span class="test-1"><input type="radio" value="test1" name="test" id="test-1" checked>testone</span> <span class="test-2"><input type="radio" value="test2" name="test" id="test-2">testtwo</span>
+                                    <span class="test-3"><input type="radio" value="test3" name="test" id="test-3">testthree</span>
+
+                                    <div style="clear:both"></div>
+                                    <p></p>
+                                    <div class="well"> <label for="place" class="control-label">Venue</label> <textarea type="text" name="place" class="form-control" id="place"></textarea>
+                                        <p></p><label for="time" class="control-label">Time</label> <input type="text" name="time" class="form-control" id="time">
+                                        <p></p><label for="manager" class="control-label">Sales person in charge</label> <select class="form-control" id="managers" name="manager">
+                                        
+                                        
+                                        
+                       <option value="Інна Цибульська">Інна Цибульська</option>
+                        <option value="Максим Загоруйко">Максим Загоруйко</option>
+                         <option value="Анна Сосіна">Анна Сосіна</option>
+                          <!-- <option value="Вероніка Гудзь">Вероніка Гудзь</option> -->
+                           <option value="Анна Бруско">Анна Бруско</option>
+                            <option value="Микола Бруско">Микола Бруско</option>
+                             <!-- <option value="Оксана Коблай">Оксана Коблай</option> -->
+                          <option value="Леся Гриценко">Леся Гриценко</option>
+                           <option value="Олена Берест">Олена Берест</option>
+                          <option value="Дарія Оснач">Дарія Оснач</option>
+                           <option value="Катерина Ткаченко">Катерина Ткаченко</option>
+                          <option value="Анна Шелест">Анна Шелест</option>
+                          <option value="Микола Куріцин">Микола Куріцин</option>
+                          <!-- <option value="Альона Зарахович">Альона Зарахович</option> -->
+                          <option value="Геннадій Білоус">Геннадій Білоус</option>
+                          <option value="Крістіна Туркуман">Крістіна Туркуман</option>
+                          <option value="Дмитро Добров">Дмитро Добров</option>
+                          <option value="Інна Чекман">Інна Чекман</option>
+                          <option value="Юлія Селещук">Юлія Селещук</option>
+                          <option value="Тетяна Черемісова">Тетяна Черемісова</option>
+                                     <!--<option value="Наташа Камбуленко">Наташа Камбуленко</option>
+                                     <option value="Лена Бизякина">Лена Бизякина</option>
+                                      <option value="Марина Бабенко">Марина Бабенко</option> -->
+                          </select>
+                                        <p></p><label for="eventoutline" class="control-label">event outline</label> <textarea type="textarea" class="form-control" name="eventoutline" id="eventoutline"></textarea>
+                                        <p></p><label for="eventlink" class="control-label">event link</label> <input type="text" name="eventlink" class="form-control" id="eventlink">
+                                        <p></p>
+                                        <label for="driver" class="control-label hide">Водій</label>
+                                        <select class="form-control hide" id="driver" name="driver">
+                      <option value="Черненко">Черненко</option>
+                      <option value="Попов">Попов</option>
+                      <option value="Павло Іванович">Павло Іванович</option>
+                      <option value="Андрій Сухомлин">Андрій Сухомлин</option>
+                      <option value="Олександр Сивак">Олександр Сивак</option>
+                      <option value="Таксі">Таксі</option>
+                      <option value="Без машини">Без машини</option>
+                      <option value="Інше">Інше</option>
+                    </select>
+                                        <span class="status-7"><input type="radio" value="zom" name="statusb" id="status-7" checked>Zoom</span>
+                                        <span class="status-8"><input type="radio" value="click" name="statusb" id="status-8">Clickmeeting</span>
+                                        <span class="status-9"><input type="radio" value="off" name="statusb" id="status-9">off-line</span>
+                                        <div id="event-manager" class="radio hide"> <strong><p>Захід</p></strong>
+                                            <p><label> <input type="radio" value="з менеджером" name="with">з менеджером</label></p>
+                                            <p><label> <input type="radio" value="без менеджера" name="with">без менеджера</label></p>
+                                        </div>
+                                    </div>
+                                    <p></p><label for="school" class="control-label hide">Назва навчального закладу</label> <input type="text" name="school" class="form-control hide" id="school">
+                                    <p></p>
+                                    <div class="well">
+                                        <div class="type-of-event"><label for="typeevent" class="control-label">Тип заходу</label> <select class="form-control" id="typeevent" name="typeevent"> <option value="Семінар">Семінар</option> <option value="Воркшоп з вчителями">Воркшоп з вчителями</option> <option value="Воркшоп з учнями">Воркшоп з учнями</option> <option value="Демо-урок">Демо-урок</option> <option value="Презентація">Презентація</option> <option value="Консультація">Консультація</option> <option value="Вебінар">Вебінар</option> <option value="Mock екзамен">Mock екзамен</option> <option value="Інший тип">Інший тип</option> </select></div>
+                                        <p></p>
+                                        <label for="campaign" class="control-label">campaign</label>
+                                        <select class="form-control" id="campaign" name="campaign"> <option value="school">school</option> <option value="uni">uni</option> <option value="proteach">proteach</option> <option value="course">course</option> <option value="alone">alone</option> <option value="sertiport">sertiport</option> <option value="pte">pte</option> </select>
+                                        <p></p>
+                                        <label for="theme" class="control-label">Topic</label>
+                                        <select class="form-control" id="theme" name="theme">
+                       <option value="Stay in control: Best Ways to Manage Your Mixed-Ability Classes">Stay in control: Best Ways to Manage Your Mixed-Ability Classes</option>
+                       <option value="Essential guidelines for success in a year-one classroom">Essential guidelines for success in a year-one classroom</option>
+                       <option value="First-year lesson planning">First-year lesson planning</option>
+                       <option value="Lesson Design: Effective Planning for Substantial Learning Outcomes">Lesson Design: Effective Planning for Substantial Learning Outcomes</option>
+                       <option value="Incorporating ZNO prep best practices into a standard 45-min lesson">Incorporating ZNO prep best practices into a standard 45-min lesson</option>
+                       <option value="Алгоритм підготовки учнів до ЗНО: частина «Аудіювання»">Алгоритм підготовки учнів до ЗНО: частина «Аудіювання»</option>
+                        <!-- <option value="What is Competency-Based Language Teaching All About?">What is Competency-Based Language Teaching All About?</option> -->
+                         <!-- <option value="Taking a Fresh Look at Teaching in Primary School">Taking a Fresh Look at Teaching in Primary School</option> -->
+                          <option value="The Golden 7: Planning a Perfect Lesson">The Golden 7: Planning a Perfect Lesson</option>
+                           <!-- <option value="Grammar Alive Інтерактивні методи презентації граматики">Grammar Alive Інтерактивні методи презентації граматики</option> -->
+                            <!-- <option value="Алгоритм підготовки учнів до складання ЗНО: частина Аудіювання">Алгоритм підготовки учнів до складання ЗНО: частина «Аудіювання»</option> -->
+                             <option value="Another topic">Another topic</option>
+                        </select>
+                                        <p></p>
+                                        <label for="additionaltheme" class="control-label theme-label">Another topic</label> <textarea type="textarea" class="form-control" name="additionaltheme" id="additionaltheme"></textarea>
+                                        <p></p>
+                                        <label for="book" class="control-label">Product promoted</label>
+                                        <select class="form-control" id="book" name="book">
+  <option value="Fly High">Fly High</option>
+  <option value="Islands">Islands</option>
+  <option value="Next Move">Next Move</option>
+  <option value="Wider World">Wider World</option>
+  <option value="Gold Experience">Gold Experience</option>
+  <option value="Focus">Focus</option>
+  <option value="Go getter">Go getter</option>
+  <option value="Business partner">Business partner</option>
+  <option value="Roadmap">Roadmap</option>
+  <option value="PTE booster">PTE booster</option>
+  <option value="New Success">New Success</option>
+  <option value="Real Life">Real Life</option>
+  <option value="Speakout">Speakout</option>
+  <option value="Language Leader">Language Leader</option>
+  <option value="Market Leader">Market Leader</option>
+  <option value="Інший підручник">Another book</option>
+</select>
+                                        <p></p><label for="additionalbook" class="control-label book-label">Another book</label> <textarea type="textarea" class="form-control" name="additionalbook" id="additionalbook"></textarea>
+                                        <p></p><label for="comment" class="control-label">Коментар</label> <textarea type="textarea" class="form-control" name="comment" id="comment"></textarea>
+
+                                        <p></p><input type="number" name="eventid" class="form-control hide" id="eventid">
+                                        <div id="sectorpromoted" class="checkbox"> <strong><p>Sector promoted</p></strong>
+                                            <p><label> <input type="checkbox" value="pre-primary" name="online">Pre-primary</label></p>
+                                            <p><label> <input type="checkbox" value="primary" name="paperempty">Primary</label></p>
+                                            <p><label> <input type="checkbox" value="lower-secondary" name="papername">lower-secondary</label></p>
+                                            <p><label> <input type="checkbox" value="upper-secondary" name="no">Upper-secondary</label></p>
+                                            <p><label> <input type="checkbox" value="нема" name="adult">Adult</label></p>
+                                            <p><label> <input type="checkbox" value="нема" name="all">All</label></p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <div class="well">
+                                        <h4 class="text-center">MARKETING</h4>
+                                        <div id="certificate" class="checkbox"> <strong><p>Certificate</p></strong>
+                                            <p><label> <input type="checkbox" value="он-лайн пустий" name="online">online empty</label></p>
+                                            <p><label> <input type="checkbox" value="он-лайн іменний" name="paperempty">online registered</label></p>
+                                            <p><label> <input type="checkbox" value="паперовий пустий" name="papername">blank paper</label></p>
+                                            <p><label> <input type="checkbox" value="паперовий іменний" name="no">paper registered</label></p>
+                                            <p><label> <input type="checkbox" value="нема" name="no">нема</label></p>
+                                        </div>
+                                        <p>&nbsp;</p>
+                                        <h4 class="text-center">Post-event</h4> <label for="numberc" class="control-label">Landing number in 1C</label> <input type="text" name="numberc" class="form-control" id="numberc">
+                                        <p></p>
+                                        <div id="thankyouletter" class="checkbox"> <strong><p>Thank You Letter</p></strong>
+                                            <p><label> <input type="checkbox" value="e-panel">e-panel</label> <button id="epanelpostevent" type="button" class="btn btn-warning btn-xs">Коментар</button></p><textarea type="textarea" class="form-control" name="epanelcomment"
+                                                id="epanelcomment"></textarea>
+                                            <p><label> <input type="checkbox" value="advert">book advertising</label> <button id="advertpostevent" type="button" class="btn btn-warning btn-xs">Коментар</button></p><textarea type="textarea" class="form-control"
+                                                name="advertcomment" id="advertcomment"></textarea>
+                                            <p><label> <input type="checkbox" value="webinars">webinars</label> <button id="webinarspostevent" type="button" class="btn btn-warning btn-xs">Коментар</button></p><textarea type="textarea" class="form-control"
+                                                name="webinarscomment" id="webinarscomment"></textarea>
+                                            <p><label> <input type="checkbox" value="конкурс">competition</label > <button id="competitionpostevent" type="button" class="btn btn-warning btn-xs">Коментар</button></p><textarea type="textarea" class="form-control" name="competitioncomment" id="competitioncomment"></textarea> <p><label> <input type="checkbox" value="сертифікат он-лайн">certificate online</label>
+                                                <button id="certificatepostevent" type="button" class="btn btn-warning btn-xs">Коментар</button>
+                                            </p><textarea type="textarea" class="form-control" name="certificatecomment" id="certificatecomment"></textarea>
+                                            <p><label> <input type="checkbox" value="запрошення на івент">event invitation</label> <button id="invitationpostevent" type="button" class="btn btn-warning btn-xs">Коментар</button></p><textarea type="textarea"
+                                                class="form-control" name="invitationcomment" id="invitationcomment"></textarea>
+                                            <p><label> <input type="checkbox" value="посилання на матеріали на сайті">links to materials on the site</label> <button id="linkpostevent" type="button" class="btn btn-warning btn-xs">Коментар</button></p>
+                                            <textarea type="textarea" class="form-control" name="linkcomment" id="linkcomment"></textarea>
+                                            <p><label> <input type="checkbox" value="звіт про івент ФБ сайт">FB event report, website</label><button id="reportpostevent" type="button" class="btn btn-warning btn-xs">Коментар</button></p><textarea type="textarea"
+                                                class="form-control" name="reportcomment" id="reportcomment"></textarea>
+                                            <p><label> <input type="checkbox" value="special offer">special offer</label> <button id="offerpostevent" type="button" class="btn btn-warning btn-xs">Коментар</button> <textarea type="textarea" class="form-control"
+                                                    name="offercomment" id="offercomment"></textarea> </p>
+                                        </div>
+                                        <p><label for="datesend" class="control-label">Date of sending the letter</label> <input type="text" name="datesend" class="form-control" id="datesend"> </p>
+                                        <p></p>
+                                    </div>
+                                    <div style="clear:both"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-12"> <button type="submit" class="btn btn-primary" value="Додати/Поновити">Зберегти</button> <button type="button" class="btn btn-default" data-dismiss="modal">Закрити</button> </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer"> </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="html" tabindex="-1" role="dialog" aria-labelledby="html">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header"> <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="html">Code for site</span>
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    <form id="web">
+                        <div class="form-group"> <label for="make" class="control-label">HTML</label> <textarea type="textarea" name="make" class="form-control" id="make" rows="10"></textarea>
+                            <p></p>
+                        </div><button type="button" class="btn btn-default" data-dismiss="modal">Закрити</button> </form>
+                </div>
+                <div class="modal-footer"> </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

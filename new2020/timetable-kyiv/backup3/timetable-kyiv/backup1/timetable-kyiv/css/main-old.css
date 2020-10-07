@@ -1,0 +1,107 @@
+.month {
+  color:#AE719F;
+  font-size:16px;
+  width: 6%;
+  border-right: 2px solid #7c7e7f !important;
+}
+tbody .btn-default {
+  opacity: 0.20;
+}
+tbody .btn-warning {
+  opacity: 0.60;
+}
+tbody button:hover {
+  opacity: 1.0;
+}
+th {
+  width: 210px;
+}
+th div {
+  color: #AE719F;
+}
+/*th {
+  color: #666262;
+}*/
+.event-info {
+  color: #ED5050;
+    padding-left: 5px;
+    font-weight: 700;
+}
+.event-accept {
+  color: #6B6A6A;
+    padding-left: 5px;
+        font-weight: 700;
+}
+.event-confirm {
+  color: #AE64EA;
+  padding-left: 5px;
+      font-weight: 700;
+}
+.event-info, .event-accept, .event-confirm {
+min-width: 170px;
+}
+
+.status-1, .status-2, .status-3 {
+  float:left;
+  width: 33%;
+  text-align:center;
+}
+
+.status-1 {
+  background-color: #FF6363;
+}
+
+.status-2 {
+    background-color: #B5B5B5;
+}
+
+.status-3 {
+      background-color: #CB91F7;
+}
+
+#delEvent {
+  margin-right: 5px;
+}
+.table-bordered > tbody > tr > td, .table-bordered > tbody > tr > th {
+  border: 1px solid #7C7E7F;
+}
+tr > td:first-child {
+  font-weight: 700;
+}
+.rh > td {
+  background-color: #BEE2AE !important;
+}
+.ss > td {
+  background-color: #9AADED !important;
+}
+.lm > td {
+  background-color: #EFD481 !important;
+}
+.kp > td {
+  background-color: #BEC5E5;
+}
+.vs > td {
+  background-color: #EAA59F !important;
+}
+.gb > td {
+  background-color: #A1EDED;
+}
+.as > td {
+  background-color: #F7E1E1 !important;
+}
+
+.hide {
+display: none;
+}
+/*.dateevent {
+display: none;
+}*/
+.weekend {
+  background-color: #D3D1D1;
+  /*color: grey;*/
+}
+
+.dayoff {
+  background-color: #EFEFEF !important;
+  /*color: grey;*/
+}
